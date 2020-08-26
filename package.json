@@ -1,6 +1,6 @@
 {
   "name": "com.flolafson.simplify",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "displayName": "Simplify2D",
   "description": "Diese Paket enthält einige nützliche Werkzeuge, um den Einstieg in die Entwicklung von 2D Anwendungen zu vereinfachen.",
   "unity": "2020.1",
