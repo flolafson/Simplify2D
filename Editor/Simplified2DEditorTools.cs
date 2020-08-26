@@ -17,7 +17,7 @@ namespace Simplify2D
         static Color defaultCanvasColor = new Color(0.2117647f, 0.6f, 0.7490196f);
         static string backgroundDefaultName = "Background";
         static string objectDefaultName = "Object";
-        static string defaultSpriteName = "Sprites/element_yellow_diamond_glossy";
+        static string defaultSpriteName = "Sprites/Puzzle/element_yellow_diamond_glossy";
         static string eventSystemName = "EventSystem";
 
         /// <summary>
