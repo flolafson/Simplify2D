@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "displayName": "Simplify2D",
   "description": "Diese Paket enthält einige nützliche Werkzeuge, um den Einstieg in die Entwicklung von 2D Anwendungen zu vereinfachen.",
-  "unity": "2020.1.3"
+  "unity": "2020.1.3",
   "dependencies": { },
   "author": {
     "name": "Florian Machill",
