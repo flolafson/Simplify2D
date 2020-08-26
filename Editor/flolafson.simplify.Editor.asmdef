@@ -1,5 +1,5 @@
 {
-    "name": "flolafson.simplify2D.Editor",
+    "name": "flolafson.simplify.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"
