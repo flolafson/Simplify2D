@@ -20,8 +20,9 @@ namespace Simplify2D
         /// </summary>
         private Image image;
 
-
-        // Die X-Koordinate des Objektes
+        /// <summary>
+        /// Die X-Koordinate des Objektes
+        /// </summary>
         public float posX
         {
             get => rectTransform.position.x;
@@ -33,8 +34,9 @@ namespace Simplify2D
             }
         }
 
-
-        // Die Y-Koordinate des Objektes
+        /// <summary>
+        /// Die Y-Koordinate des Objektes
+        /// </summary>
         public float posY
         {
             get => rectTransform.position.y;
@@ -47,7 +49,7 @@ namespace Simplify2D
         }
 
         /// <summary>
-        /// Die X- und Y-Koordinate des Objektes als zwei dimensionaler Vektor
+        /// Die X- und Y-Koordinate des Objektes als dimensionaler Vektor
         /// </summary>
         public Vector3 positon
         {
