@@ -49,7 +49,7 @@ namespace Simplify2D
         }
 
         /// <summary>
-        /// Die X- und Y-Koordinate des Objektes als dimensionaler Vektor
+        /// Die x-, y- und z-Koordinate des Objektes als dimensionaler Vektor
         /// </summary>
         public Vector3 positon
         {
@@ -57,6 +57,18 @@ namespace Simplify2D
             set
             {
                 rectTransform.position = value;
+            }
+        }
+
+        /// <summary>
+        /// Die Skalierung in x-, y- und z-Richtung des Objektes als dimensionaler Vektor
+        /// </summary>
+        public Vector3 scale 
+        {
+            get => transform.localScale;
+            set 
+            {
+                rectTransform.localScale = value;
             }
         }
 
