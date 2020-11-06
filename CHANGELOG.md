@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.1] - 2020-11-06
+*Bugfix*
+### Fix
+- Schreibfehler korrigiert (position anstelle von positon)
+
 ## [1.0.0] - 2020-08-26
 *Release-Version*
 ### Changed

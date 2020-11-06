@@ -51,7 +51,7 @@ namespace Simplify2D
         /// <summary>
         /// Die x-, y- und z-Koordinate des Objektes als dimensionaler Vektor
         /// </summary>
-        public Vector3 positon
+        public Vector3 position
         {
             get => transform.position;
             set
