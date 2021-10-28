@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.1] - 2021-10-28
+*Feature*
+### Added
+- Funktion zum Begrenzen der Framerate im Simplify2D-Menü ergänzt
+
 ## [1.1.1] - 2020-11-06
 *Bugfix*
 ### Fix

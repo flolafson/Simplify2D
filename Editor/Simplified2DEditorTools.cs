@@ -38,13 +38,13 @@ namespace Simplify2D
         static Simplified2DEditorTools()
         {
             justRecompiled = true;
-        }
+        }        
 
         /// <summary>
         /// Create a canvas if not already created and
         /// create and adds a new Object to the canvas
         /// </summary>
-        [MenuItem("Simplify2D/2D Objekt erstellen")]
+        [MenuItem("Simplify2D/2D Objekt erstellen", false, 100)]
         static void CreateNew2DObject()
         {
             Canvas canvas = FindObjectOfType<Canvas>();
@@ -52,11 +52,13 @@ namespace Simplify2D
             // Create new canvas
             if (canvas == null)
             {
+                // Setup canvas
                 GameObject canvasGo = new GameObject(canvasDefaultName);
                 canvas = canvasGo.AddComponent<Canvas>();
                 canvas.renderMode = RenderMode.ScreenSpaceOverlay;
                 canvasGo.AddComponent<CanvasScaler>();
                 canvasGo.AddComponent<GraphicRaycaster>();
+                canvasGo.AddComponent<Simplified2DCanvas>();
 
                 Vector2 canvasSize = canvas.GetComponent<RectTransform>().rect.size;
 
@@ -95,10 +97,37 @@ namespace Simplify2D
         /// Draws a window for create a new script which will
         /// inherate from the Shape2D-Class
         /// </summary>
-        [MenuItem("Simplify2D/Neues Skript erstellen")]
+        [MenuItem("Simplify2D/Neues Skript erstellen", false, 101)]
         static void ShowCreateScriptWindow()
         {
             GetWindow<Simplified2DEditorTools>("2D Skript erstellen");
+        }
+
+        /// <summary>
+        /// Limit the framerate to 60 FPS
+        /// </summary>
+        [MenuItem("Simplify2D/Framerate/Begrenzen (~60 FPS)", false, 201)]
+        static void LimitFramerateTo60()
+        {
+            PlayerPrefs.SetInt("LimitFPS", 1);
+        }
+
+        [MenuItem("Simplify2D/Framerate/Begrenzen (~60 FPS)", true, 201)]
+        static bool LimitFramerateTo60Validate()
+        {
+            return PlayerPrefs.GetInt("LimitFPS", 0) == 0;
+        }
+
+        [MenuItem("Simplify2D/Framerate/Unbegrenzt", false, 221)]
+        static void UnlimitFramerate()
+        {
+            PlayerPrefs.SetInt("LimitFPS", 0);
+        }
+
+        [MenuItem("Simplify2D/Framerate/Unbegrenzt", true, 221)]
+        static bool UnlimitFramerateValidate()
+        {
+            return PlayerPrefs.GetInt("LimitFPS", 0) == 1;
         }
 
 

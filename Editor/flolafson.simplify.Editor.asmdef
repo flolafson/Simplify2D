@@ -1,9 +1,9 @@
 {
     "name": "flolafson.simplify.Editor",
-    "references": [],
-    "includePlatforms": [
-        "Editor"
+    "references": [
+        "GUID:915dc214770d5f64a98c935bc0907453"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
