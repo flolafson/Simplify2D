@@ -4,9 +4,16 @@ namespace Simplify2D
 {
     public class Simplified2DCanvas : MonoBehaviour
     {
+        private bool limitFPS = false;
+
+        void Awake() 
+        {
+            CheckFramerateLimit();
+        }
+
         // Start is called before the first frame update
         void Start()
-        {
+        {            
             InvokeRepeating("CheckFramerateLimit", 1, 1);
         }
 
@@ -17,19 +24,26 @@ namespace Simplify2D
         private void CheckFramerateLimit()
         {
             // Limit FPS = 1 / No Limit = 0 
-            int limitFPS = PlayerPrefs.GetInt("LimitFPS", 0);
+            bool newLimitFPS = PlayerPrefs.GetInt("LimitFPS", 0) == 0 ? false : true;
 
-            // No limit
-            if (limitFPS == 0)
+            // Limit has changed
+            if (limitFPS != newLimitFPS)
             {
-                QualitySettings.vSyncCount = 1;
-                Application.targetFrameRate = -1;                
-            }
-            // limit to 60 FPS
-            else
-            {                
-                QualitySettings.vSyncCount = 0;
-                Application.targetFrameRate = 60;
+                limitFPS = newLimitFPS;
+
+                // No limit
+                if (limitFPS)
+                {
+                    QualitySettings.vSyncCount = 0;
+                    Application.targetFrameRate = 60;
+                    
+                }
+                // limit to 60 FPS
+                else
+                {
+                    QualitySettings.vSyncCount = 1;
+                    Application.targetFrameRate = -1;
+                }
             }
         }
     }
